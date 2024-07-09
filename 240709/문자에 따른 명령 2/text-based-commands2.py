@@ -11,7 +11,7 @@ for s in move:
         x += dx[dir]
         y += dy[dir]
     elif s == 'L':
-        dir = (4 + dir - 1) % 4
+        dir = (3 + dir) % 4
     else:
         dir = (dir + 1) % 4
 
