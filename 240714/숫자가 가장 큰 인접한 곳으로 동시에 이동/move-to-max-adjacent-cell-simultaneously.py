@@ -13,10 +13,13 @@ next_count = [[0] * n for _ in range(n)]
 
 def move(x, y): # 큰 곳으로 이동
     max_x, max_y = 0, 0
+    max = 0
+
     for dx, dy in zip(dxs, dys): 
         nx, ny = x + dx, y + dy
 
-        if in_range(nx, ny) and matrix[ny][nx] > matrix[y][x]:
+        if in_range(nx, ny) and matrix[ny][nx] > max:
+            max = matrix[ny][nx]
             max_x, max_y = nx, ny
                     
     next_count[max_y][max_x] += 1    
@@ -25,9 +28,9 @@ def move_all():
     for i in range(n):
         for j in range(n):
             if count[i][j] == 1:
-                move(i, j)
+                move(j, i)
 
-for _ in range(m):
+for _ in range(m): # 초기값 입력
     r, c = map(int, input().split())
     count[r - 1][c - 1] += 1
 
