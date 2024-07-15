@@ -11,11 +11,10 @@ def choose(curr_num):
         return
     else:
         for i in range(1, K + 1):
-            if curr_num <= 2 or answer[-1] != answer[-2]:
+            if curr_num <= 2 or (answer[-1] != i or answer[-2] != i):
                 answer.append(i)
                 choose(curr_num + 1)
                 answer.pop()
-        return    
 
 K, N = map(int, input().split())
 choose(1)
