@@ -15,9 +15,6 @@ def dfs(x, y):
     for dx, dy in zip(dxs, dys):
         new_x, new_y = x + dx, y + dy
 
-        if new_x == n and new_y == n:
-            return True
-
         if can_go(new_x, new_y):
             visited[new_y][new_x] = True
             dfs(new_x, new_y)
@@ -28,8 +25,8 @@ grid = [[0] * (n + 1)]
 for _ in range(n):
     grid.append([0] + list(map(int, input().split())))
 visited = [[False] * (n + 1) for _ in range(n + 1)]
+visited[1][1] = True
 
-if dfs(1, 1):
-    print(1)
-else:
-    print(0)
+dfs(1, 1)
+
+print(1 if visited[n][n] else 0)
