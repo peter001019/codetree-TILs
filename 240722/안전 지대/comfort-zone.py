@@ -1,3 +1,6 @@
+import sys
+sys.setrecursionlimit(10**7)
+
 #동서남북
 dxs = [1, -1, 0, 0]
 dys = [0, 0, 1, -1]
