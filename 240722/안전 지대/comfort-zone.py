@@ -1,5 +1,5 @@
 import sys
-sys.setrecursionlimit(10**7)
+sys.setrecursionlimit(10**4)
 
 #동서남북
 dxs = [1, -1, 0, 0]
