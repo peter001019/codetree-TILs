@@ -35,7 +35,7 @@ grid = []
 for _ in range(N):
     grid.append(list(map(int, input().split())))
 
-max_K = 0
+max_K = 1
 max_safety = 0
 
 for k in range(1, 100):
