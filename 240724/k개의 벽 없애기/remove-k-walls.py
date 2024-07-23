@@ -38,7 +38,7 @@ def execute(): #선택된 벽을 없애고, bfs를 실행한다.
     for x, y in arr:
         ngrid[y][x] = 0
 
-    q.append((start[0] - 1, start[1] - 1))
+    q.append((start[1] - 1, start[0] - 1))
     bfs(ngrid, visited)
 
     if visited[end_y][end_x] and result > ngrid[end_y][end_x]:
