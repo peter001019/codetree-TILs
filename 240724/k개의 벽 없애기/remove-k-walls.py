@@ -60,7 +60,7 @@ result = sys.maxsize
 
 choose(0, 0)
 
-print(result)
+print(result if result != sys.maxsize else -1)
 
 '''
 k개의 벽을 선택한다.
